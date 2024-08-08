@@ -26,6 +26,7 @@ Fully-connected neural network is used to resolve nonlinear regression task. The
 * Engine: `int` - Vehicle engine volume.
 * Power: `int` - Vehicle horsepower.
 * Seats: `int` - Number of seats.
+
 Examples:
 | Brand   | Model   | Year | Kilometers_Driven | Fuel_Type | Transmission | Owner_Type | Mileage | Engine | Power | Seats | Price   |
 |---------|---------|------|-------------------|-----------|--------------|------------|---------|--------|-------|-------|---------|
@@ -35,8 +36,9 @@ Examples:
 | Maruti  | Swift   | 2020 | 30000             | Diesel    | Manual       | Third      | 23      | 1248   | 74    | 5     | 600000  |
 | Hyundai | Sonata  | 2016 | 60000             | Diesel    | Automatic    | Second     | 18      | 1999   | 194   | 5     | 850000  |
 
-## Output Property
-- Price
+## Output Property:
+- Vehicle Price: `float`
+
 ![Avg. Price per Brand](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Avg.%20Price%20per%20Brand.png)
 
 # Network`s Architecture
