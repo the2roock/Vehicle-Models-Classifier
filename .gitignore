@@ -165,7 +165,3 @@ cython_debug/
 # VS Code
 Vehicle-Prices-Identifier.code-workspace
 .vscode/
-
-
-# local NN models
-models/*.model
