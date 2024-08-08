@@ -53,11 +53,11 @@ The model has 105 parameters.
 
 
 # Data Preprocessing
-1. One-hot encoding of Object data columns.
+1. One-hot encoding of object data columns.
 2. Splitting data into input features and expected outputs.
 3. MinMax normalization.
-4. K-Fold splitting to train and test datasets.
-5. Convertation to Tensor.
+4. K-Fold splitting into train and test datasets.
+5. Conversion to Tensor.
 
 
 # Traning
