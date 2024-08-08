@@ -1,10 +1,10 @@
 # Vehicle-Prices-Identifier
 
 # Goal
-Develop neural net that defines vehicle prices by them properties.
+Develop neural net that predicts vehicle prices based on their properties.
 
 # Description
-Fully-connected neural network is used to resolve nonlinear regression task. The model developed may be use to predict cars price reletive to given inputs.
+A fully-connected neural network is used to solve a nonlinear regression task. The developed model can be used to predict car prices relative to given inputs.
 
 ## Skills:
 - Python
@@ -12,14 +12,15 @@ Fully-connected neural network is used to resolve nonlinear regression task. The
 - Nonlinear Regression
 - Supervised Learning
 - Data Engineering
-- Pytorch
+- PyTorch
+
 
 # Data Overview
 ## Input Features:
 * Brand: `str` - Vehicle brand. 11 unique values.
 * Model: `str` - Vehicle model. 58 unique values.
 * Year: `int` - Year of manufacture.
-* Kilometers_Driven: `int` - Kilometers vehicle driven.
+* Kilometers_Driven: `int` - Kilometers the vehicle has driven.
 * Fuel_Type: `str` - Type of fuel. 2 unique values.
 * Transmission: `str` - Type of transmission. 2 unique values.
 * Owner_Type: `str` - Owner sequence number. 3 unique values.
@@ -44,9 +45,12 @@ Fully-connected neural network is used to resolve nonlinear regression task. The
 
 ![Avg. Price per Brand](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Avg.%20Price%20per%20Brand.png)
 
+
 # Network`s Architecture
 The model has 105 parameters.
+
 ![Model Design](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Model%20Architecture.png)
+
 
 # Data Preprocessing
 1. One-hot encoding of Object data columns.
@@ -55,15 +59,17 @@ The model has 105 parameters.
 4. K-Fold splitting to train and test datasets.
 5. Convertation to Tensor.
 
+
 # Traning
 ## Hyperparameters:
 - Learning Rate: 0.0001
 - Epochs: 50,000
 - Loss Function: Mean Squared Error
 - Optimization Algorithm: Adam
-## Accuracy Analysis:
+## Accuracy Dynamic:
 The best loss: 3.99e-06
 ![Train-Test Losses](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Training%20Results.png)
+
 
 # Results
 ## Simulate Prediction
