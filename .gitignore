@@ -168,4 +168,4 @@ Vehicle-Prices-Identifier.code-workspace
 
 
 # local NN models
-*.model
+models/*.model
