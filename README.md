@@ -10,11 +10,12 @@ Fully-connected neural network is used to resolve nonlinear regression task. The
 - Python
 - Machine Learning
 - Nonlinear Regression
+- Supervised Learning
 - Data Engineering
 - Pytorch
 
 # Data Overview
-## Input Properties:
+## Input Features:
 * Brand: `str` - Vehicle brand. 11 unique values.
 * Model: `str` - Vehicle model. 58 unique values.
 * Year: `int` - Year of manufacture.
@@ -27,7 +28,10 @@ Fully-connected neural network is used to resolve nonlinear regression task. The
 * Power: `int` - Vehicle horsepower.
 * Seats: `int` - Number of seats.
 
-Examples:
+## Output Feature:
+- Vehicle Price: `float`
+
+## Examples:
 | Brand   | Model   | Year | Kilometers_Driven | Fuel_Type | Transmission | Owner_Type | Mileage | Engine | Power | Seats | Price   |
 |---------|---------|------|-------------------|-----------|--------------|------------|---------|--------|-------|-------|---------|
 | Toyota  | Corolla | 2018 | 50000             | Petrol    | Manual       | First      | 15      | 1498   | 108   | 5     | 800000  |
@@ -36,17 +40,33 @@ Examples:
 | Maruti  | Swift   | 2020 | 30000             | Diesel    | Manual       | Third      | 23      | 1248   | 74    | 5     | 600000  |
 | Hyundai | Sonata  | 2016 | 60000             | Diesel    | Automatic    | Second     | 18      | 1999   | 194   | 5     | 850000  |
 
-## Output Property:
-- Vehicle Price: `float`
+
 
 ![Avg. Price per Brand](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Avg.%20Price%20per%20Brand.png)
 
 # Network`s Architecture
-
+The model has 105 parameters.
+![Model Design](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Model%20Architecture.png)
 
 # Data Preprocessing
-
+1. One-hot encoding of Object data columns.
+2. Splitting data into input features and expected outputs.
+3. MinMax normalization.
+4. K-Fold splitting to train and test datasets.
+5. Convertation to Tensor.
 
 # Traning
+## Hyperparameters:
+- Learning Rate: 0.0001
+- Epochs: 50,000
+- Loss Function: Mean Squared Error
+- Optimization Algorithm: Adam
+## Accuracy Analysis:
+The best loss: 3.99e-06
+![Train-Test Losses](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Training%20Results.png)
 
 # Results
+## Simulate Prediction
+![Comparison of Predicted and Real Values](https://github.com/the2roock/Vehicle-Prices-Identifier/blob/main/plots/Comparison%20of%20Predicted%20and%20Real%20Values.png)
+## Final Accuracy Score
+Model`s Absolute Error is 4,221.95$
